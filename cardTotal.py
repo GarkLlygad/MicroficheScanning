@@ -3,7 +3,7 @@ import json
 from datetime import datetime, timedelta
 
 cardCountTotal = 0
-uploader = 'associate-michael-arp'
+uploader = 'associate-dylan-lewis'
 print("Current selected uploader is: " + uploader)
 
 allItems = set()
