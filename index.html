@@ -1,153 +1,212 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>IA Cards</title>
-    <link rel="icon" href="Eyeball.svg" type="image/svg+xml">
-    <link rel="alternate icon" href="Eyeball.svg">
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #333232;
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            padding: 2em;
-        }
-
-        table {
-            border-collapse: collapse;
-            border: 2px solid burlywood;
-            background-color: #2a2a2a;
-        }
-
-        td {
-            border: 1px solid burlywood;
-            padding: 12px 20px;
-            text-align: center;
-            color: burlywood;
-        }
-    </style>
-</head>
-
-<body>
-    <table>
-        <caption style="caption-side: bottom;">
-            <div>
-                <br>
-                <h1>Total Items so far: 200,000</h1>
-                <h1>Total Cards so far: 400,000</h1>
-            </div>
-        </caption>
-        <tbody>
-            <tr>
-                <td>
-                    <div cardsName="Dylan">Dylan</div>
-                    <div cardTotal="Dylan">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Fernando">Fernando</div>
-                    <div cardTotal="Fernando">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Elijah">Elijah</div>
-                    <div cardTotal="Elijah">120,000</div>
-                </td>
-
-            </tr>
-            <tr>
-                <td>
-                    <div cardsName="Fredy">Fredy</div>
-                    <div cardTotal="Fredy">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Emmie">Emmie</div>
-                    <div cardTotal="Emmie">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Cameron">Cameron</div>
-                    <div cardTotal="Cameron">120,000</div>
-                </td>
-
-            </tr>
-            <tr>
-                <td>
-                    <div cardsName="Vinny">Vinny</div>
-                    <div cardTotal="Vinny">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Maya">Maya</div>
-                    <div cardTotal="Maya">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Miguel">Miguel</div>
-                    <div cardTotal="Miguel">120,000</div>
-                </td>
-
-            </tr>
-            <tr>
-                <td>
-                    <div cardsName="Kurt">Kurt</div>
-                    <div cardTotal="Kurt">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Hope">Hope</div>
-                    <div cardTotal="Hope">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Jay">Jay</div>
-                    <div cardTotal="Jay">120,000</div>
-                </td>
-
-            </tr>
-            <tr>
-                <td>
-                    <div cardsName="Xane">Xane</div>
-                    <div cardTotal="Xane">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Sophia">Sophia</div>
-                    <div cardTotal="Sophia">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Sylvie">Sylvie</div>
-                    <div cardTotal="Sylvie">120,000</div>
-                </td>
-
-            </tr>
-            <tr>
-                <td>
-                    <div cardsName="Axia">Axia</div>
-                    <div cardTotal="Axia">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Danielle">Danielle</div>
-                    <div cardTotal="Danielle">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Josh">Josh</div>
-                    <div cardTotal="Josh">120,000</div>
-                </td>
-
-            </tr>
-            <tr>
-                <td>
-                    <div cardsName="Michael">Michael</div>
-                    <div cardTotal="Michael">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Maeve">Maeve</div>
-                    <div cardTotal="Maeve">120,000</div>
-                </td>
-                <td>
-                    <div cardsName="Louis">Louis</div>
-                    <div cardTotal="Louis">120,000</div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-
+ <head>
+  <link rel="stylesheet" href="landingStyle.css">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   IA Cards
+  </title>
+  <link href="Eyeball.svg" rel="icon" type="image/svg+xml"/>
+  <link href="Eyeball.svg" rel="alternate icon"/>
+ </head>
+ <body>
+  <table>
+   <caption style="caption-side: bottom;">
+    <div>
+     <br/>
+     <h1>
+      Total Items so far: 200,000
+     </h1>
+     <h1>
+      Total Cards so far: 400,000
+     </h1>
+    </div>
+   </caption>
+   <tbody>
+    <tr>
+     <td>
+      <div id="DylanName">
+       Dylan
+      </div>
+      <div id="DylanTotal">
+       476
+      </div>
+     </td>
+     <td>
+      <div id="FernandoName">
+       Fernando
+      </div>
+      <div id="FernandoTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="ElijahName">
+       Elijah
+      </div>
+      <div id="ElijahTotal">
+       120,000
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <div id="FredyName">
+       Fredy
+      </div>
+      <div id="FredyTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="EmmieName">
+       Emmie
+      </div>
+      <div id="EmmieTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="CameronName">
+       Cameron
+      </div>
+      <div id="CameronTotal">
+       120,000
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <div id="VinnyName">
+       Vinny
+      </div>
+      <div id="VinnyTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="MayaName">
+       Maya
+      </div>
+      <div id="MayaTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="MiguelName">
+       Miguel
+      </div>
+      <div id="MiguelTotal">
+       120,000
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <div id="KurtName">
+       Kurt
+      </div>
+      <div id="KurtTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="HopeName">
+       Hope
+      </div>
+      <div id="HopeTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="JayName">
+       Jay
+      </div>
+      <div id="JayTotal">
+       120,000
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <div id="XaneName">
+       Xane
+      </div>
+      <div id="XaneTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="SophiaName">
+       Sophia
+      </div>
+      <div id="SophiaTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="SylvieName">
+       Sylvie
+      </div>
+      <div id="SylvieTotal">
+       120,000
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <div id="AxiaName">
+       Axia
+      </div>
+      <div id="AxiaTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="DanielleName">
+       Danielle
+      </div>
+      <div id="DanielleTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="JoshName">
+       Josh
+      </div>
+      <div id="JoshTotal">
+       120,000
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <div id="MichaelName">
+       Michael
+      </div>
+      <div id="MichaelTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="MaeveName">
+       Maeve
+      </div>
+      <div id="MaeveTotal">
+       120,000
+      </div>
+     </td>
+     <td>
+      <div id="LouisName">
+       Louis
+      </div>
+      <div id="LouisTotal">
+       120,000
+      </div>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
 </html>
