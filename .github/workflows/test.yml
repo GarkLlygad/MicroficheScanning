@@ -1,3 +1,5 @@
+name: GitHub Actions Test
+run-name: Github actions test
 on:
   schedule:
     - cron: "48 5 * * *"
