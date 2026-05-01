@@ -1,7 +1,6 @@
 on:
   schedule:
     - cron: '42 5 * * *'
-    timezone: "America/Los_Angeles"
 
 jobs:
   test_schedule:
