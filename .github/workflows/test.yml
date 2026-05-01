@@ -2,8 +2,7 @@ name: GitHub Actions Test
 run-name: Github actions test
 on:
   schedule:
-    - cron: "0 23 * * *"
-      timezone: "America/Los_Angeles"
+    - cron: "10 6 * * *"
 
 jobs:
   test_schedule:
