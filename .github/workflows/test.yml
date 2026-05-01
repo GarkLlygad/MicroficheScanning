@@ -1,0 +1,10 @@
+on:
+  schedule:
+    - cron: "44 5 * * *"
+
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo "Test"
