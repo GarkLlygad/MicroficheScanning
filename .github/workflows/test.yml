@@ -3,6 +3,7 @@ run-name: Github actions test
 on:
   schedule:
     - cron: "38 * * * *"
+  workflow_dispatch: 
 
 jobs:
   test_schedule:
