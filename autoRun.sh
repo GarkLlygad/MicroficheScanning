@@ -1,3 +1,3 @@
 #!/bin/bash
-
-/usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py
+cd /home/gark/MicroficheScanning
+/usr/bin/python3 cardHour.py
