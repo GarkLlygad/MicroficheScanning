@@ -39,10 +39,10 @@ if len(allItems) > 0:
 # print("Card count so far: " + str(cardCountTotal))
 # print("Item count so far: " + str(itemCountTotal))
 
-with open("scanners/dylan.html") as fp:
+with open("/home/gark/MicroficheScanning/scanners/dylan.html") as fp:
     soup = BeautifulSoup(fp, 'html.parser')
     soup.find(id="DylanToday").string = str(cardCountTotal)
-with open("scanners/dylan.html", "w") as fp:
+with open("/home/gark/MicroficheScanning/scanners/dylan.html", "w") as fp:
     fp.write(soup.prettify())
 
 # filename = "test_" + datetime.now().strftime("%H%M%S_%Y%m%d") + ".json"
