@@ -1,0 +1,14 @@
+Set up bash/cron automation
+Set up openvpn on the pi for remote debugging
+Set up manual github workflow to run script
+    might need some additional tooling in order for the python script to work or be a super long workflow with all scanners
+
+Add support for rescan ids on scanner pages
+Add support for last week of historical data?
+    if so, keep to the last days with actual scans?
+
+Deploy the page to cloudflare hosting
+    rough math puts build count at between 340 and 391, both which leave plenty of overhead on free plan of 500
+
+Clean up styling/css
+    also bring in the media queries for a new table
