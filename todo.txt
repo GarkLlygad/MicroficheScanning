@@ -3,7 +3,6 @@ Set up openvpn on the pi for remote debugging
 Set up manual github workflow to run script
     might need some additional tooling in order for the python script to work or be a super long workflow with all scanners
 
-Add support for rescan ids on scanner pages
 Add support for last week of historical data?
     if so, keep to the last days with actual scans?
 
