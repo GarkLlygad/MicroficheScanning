@@ -26,3 +26,20 @@ h1 {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+span {
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: xxx-large;
+}
+
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+   padding: 0;
+}

@@ -9,6 +9,7 @@ Add support for last week of historical data?
 
 Deploy the page to cloudflare hosting
     rough math puts build count at between 340 and 391, both which leave plenty of overhead on free plan of 500
+Make Github repo public
 
 Clean up styling/css
     also bring in the media queries for a new table

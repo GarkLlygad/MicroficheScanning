@@ -6,7 +6,7 @@ import sys
 
 cardCountTotal = 0
 uploaderArg = sys.argv[1]
-uploaderlist = ['associate-dylan-lewis', 'elijah_jarret', 'fernando_sibrian', 'associate-axia-barish', 'associate-cameron-patera', 'associate-danielle-leard', 'associate-emmie-zimmer', 'associate-fredy-udave', 'associate-hope-snipes', 'associate-jay-luca', 'associate-josh-salazar', 'associate-kurt-hamilton', 'associate-maeve-iwasaki', 'associate-maya-pearsall', 'associate-michael-arp', 'associate-miguel-salazar', 'associate-sophia-huang', 'associate-annie-russell', 'associate-vinny-taylor', 'associate-xaneath-nelson', 'louis.brizuela@archive.org']
+uploaderList = ['associate-dylan-lewis', 'elijah_jarret', 'fernando_sibrian', 'associate-axia-barish', 'associate-cameron-patera', 'associate-danielle-leard', 'associate-emmie-zimmer', 'associate-fredy-udave', 'associate-hope-snipes', 'associate-jay-luca', 'associate-josh-salazar', 'associate-kurt-hamilton', 'associate-maeve-iwasaki', 'associate-maya-pearsall', 'associate-michael-arp', 'associate-miguel-salazar', 'associate-sophia-huang', 'associate-annie-russell', 'associate-vinny-taylor', 'associate-xaneath-nelson', 'louis.brizuela@archive.org']
 if uploaderArg == "sylvie":
     uploader = 'associate-annie-russell'
 else:
@@ -16,10 +16,22 @@ else:
             print("Found", str(uploader), "in", str(i))
 print("Current selected uploader is: " + uploader)
 
+dayShiftStart = "130000"
+dayShiftEnd = "125900"
+nightShiftStart = "220000"
+nightShiftEnd = "215900"
+
 currentDay = datetime.now()
-currentDayComplete = currentDay.strftime("%Y%m%d") + "000000"
 nextDay = currentDay + timedelta(days=1)
-nextDayComplete = nextDay.strftime("%Y%m%d") + "000000"
+
+nightshiftList = ["michael", "jay", "hope", "axia", "danielle", "josh", "sylvie", "sophia", "maeve", "xane"]
+if uploaderArg in i:
+    currentDayComplete = currentDay.strftime("%Y%m%d") + nightShiftStart
+    nextDayComplete = nextDay.strftime("%Y%m%d") + nightShiftEnd
+else:
+    currentDayComplete = currentDay.strftime("%Y%m%d") + dayShiftStart
+    nextDayComplete = nextDay.strftime("%Y%m%d") + dayShiftEnd
+
 print(currentDayComplete, nextDayComplete)
 
 allItems = set()
@@ -52,18 +64,8 @@ else:
     print("No items found")
 
 
-with open(f"scanners/{uploaderArg}.html") as fp:
+with open(f"/home/gark/MicroficheScanning/scanners/{uploaderArg}.html") as fp:
     soup = BeautifulSoup(fp, 'html.parser')
     soup.find(id=f"{uploaderArg}Today").string = str(cardCountTotal)
-with open(f"scanners/{uploaderArg}.html", "w") as fp:
+with open(f"/home/gark/MicroficheScanning/scanners/{uploaderArg}.html", "w") as fp:
     fp.write(soup.prettify())
-
-# filename = "test_" + datetime.now().strftime("%H%M%S_%Y%m%d") + ".json"
-# with open(filename, "w") as file:
-#     data = {
-#         "date": previousDayFormat,
-#         "item_count": itemCountTotal,
-#         "cardcount_total": cardCountTotal
-#     }
-#     json.dump(data, file, indent=2)
-# print(f"Data exported to {filename}")
