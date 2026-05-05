@@ -1,0 +1,4 @@
+set up ubuntu-latest box
+pip install beautifulsoup and internetarchive - maybe a requirements file works?
+force a python3 version
+run manual script
