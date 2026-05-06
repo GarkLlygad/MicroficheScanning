@@ -23,8 +23,8 @@ nightShiftEnd = "215900"
 currentDay = datetime.now()
 nextDay = currentDay + timedelta(days=1)
 
-nightshiftList = ["michael", "jay", "hope", "axia", "danielle", "josh", "sylvie", "sophia", "maeve", "xane"]
-if uploaderArg in i:
+nightShiftList = ["michael", "jay", "hope", "axia", "danielle", "josh", "sylvie", "sophia", "maeve", "xane"]
+if uploaderArg in nightShiftList:
     currentDayComplete = currentDay.strftime("%Y%m%d") + nightShiftStart
     nextDayComplete = nextDay.strftime("%Y%m%d") + nightShiftEnd
 else:
