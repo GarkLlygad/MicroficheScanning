@@ -6,4 +6,4 @@ if [[ -z $(git status -s) ]]; then
 fi
 git add .
 git commit -m "RaspberryPi auto update $(date +'%Y-%m-%d %H:%M:%S')"
-git push -u origin master
+git push
