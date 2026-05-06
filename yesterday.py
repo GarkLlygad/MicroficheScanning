@@ -69,3 +69,9 @@ with open(f"/home/gark/MicroficheScanning/scanners/yesterday.html") as fp:
     soup.find(id=f"{uploaderArg}Yesterday1").string = str(cardCountTotal)
 with open(f"/home/gark/MicroficheScanning/scanners/yesterday.html", "w") as fp:
     fp.write(soup.prettify())
+
+with open(f"/home/gark/MicroficheScanning/scanners/{uploaderArg}.html") as fp:
+    soup = BeautifulSoup(fp, 'html.parser')
+    soup.find(id=f"{uploaderArg}Yesterday").string = str(cardCountTotal)
+with open(f"/home/gark/MicroficheScanning/scanners/{uploaderArg}.html", "w") as fp:
+    fp.write(soup.prettify())

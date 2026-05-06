@@ -3,6 +3,8 @@ Set up bash/cron automation
 Set up openvpn on the pi for remote debugging
 Set up manual github workflow to run script
 	might need custom python script or be a super long workflow with all scanners
+Implement proper try catches throughout scripts
+	failure occuring due to archive being slow/down can probably result in some weird errors
 
 Add support for last week of historical data?
 	if so, keep to the last days with actual scans?
