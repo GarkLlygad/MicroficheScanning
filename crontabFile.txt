@@ -1,4 +1,7 @@
-10 6-15 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py dylan
+
+UPDATE PI WITH THIS
+
+10 7-15 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py dylan
 12 7-15 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py elijah
 14 7-15 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py fernando
 16 7-15 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py fredy
@@ -19,5 +22,5 @@
 46 15-23 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py xane
 48 7-15 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py kurt
 50 7-15 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py louis
-0 7 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/rescan.py
-44 8-23 * * 1-5 /home/gark/MicroficheScanning/autoRun.sh >> /home/gark/cron.log 2>&1
+55 6 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/rescan.py
+0 8-23 * * 1-5 /home/gark/MicroficheScanning/autoRun.sh >> /home/gark/cron.log 2>&1
