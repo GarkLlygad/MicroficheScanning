@@ -38,7 +38,7 @@ allItems = set()
 for i in search_items(f'uploader:{uploader} scandate:[{currentDayComplete} TO {nextDayComplete}]'):
     allItems.add(i['identifier'])
 itemCountTotal = len(allItems)
-print(itemCountTotal)
+print("Total item count: " + str(itemCountTotal))
 
 if itemCountTotal > 0:
     for i in range(1, 20):
@@ -48,7 +48,7 @@ if itemCountTotal > 0:
             allItems.discard(j['identifier'])
         cardCountTotal += (len(items) * i)
 
-    print("Currently at " + str(cardCountTotal))
+    print("Currently at " + str(cardCountTotal) + " cards")
 
     if len(allItems) > 0:
         print("Found " + str(len(allItems)) + " additional items.")
