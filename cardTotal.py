@@ -1,5 +1,4 @@
 from internetarchive import get_item, search_items
-import json
 from datetime import datetime, timedelta
 
 cardCountTotal = 0
@@ -28,13 +27,3 @@ if len(allItems) > 0:
 
 print("Card count so far: " + str(cardCountTotal))
 print("Item count so far: " + str(itemCountTotal))
-
-# filename = "test_" + datetime.now().strftime("%H%M%S_%Y%m%d") + ".json"
-# with open(filename, "w") as file:
-#     data = {
-#         "date": previousDayFormat,
-#         "item_count": itemCountTotal,
-#         "cardcount_total": cardCountTotal
-#     }
-#     json.dump(data, file, indent=2)
-# print(f"Data exported to {filename}")

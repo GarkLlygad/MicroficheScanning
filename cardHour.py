@@ -1,5 +1,4 @@
 from internetarchive import get_item, search_items
-import json
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 import sys
