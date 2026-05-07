@@ -21,20 +21,21 @@ nightShiftStart = "220000"
 nightShiftEnd = "215900"
 
 currentDay = datetime.now()
-nextDay = currentDay + timedelta(days=1)
+yesterday = currentDay - timedelta(days=1)
+
 
 nightShiftList = ["michael", "jay", "hope", "axia", "danielle", "josh", "sylvie", "sophia", "maeve", "xane"]
 if uploaderArg in nightShiftList:
-    currentDayComplete = currentDay.strftime("%Y%m%d") + nightShiftStart
-    nextDayComplete = nextDay.strftime("%Y%m%d") + nightShiftEnd
+    yesterdayComplete = yesterday.strftime("%Y%m%d") + nightShiftStart
+    currentDayComplete = currentDay.strftime("%Y%m%d") + nightShiftEnd
 else:
-    currentDayComplete = currentDay.strftime("%Y%m%d") + dayShiftStart
-    nextDayComplete = nextDay.strftime("%Y%m%d") + dayShiftEnd
+    yesterdayComplete = yesterday.strftime("%Y%m%d") + dayShiftStart
+    currentDayComplete = currentDay.strftime("%Y%m%d") + dayShiftEnd
 
-print(currentDayComplete, nextDayComplete)
+print(yesterdayComplete, currentDayComplete)
 
 allItems = set()
-for i in search_items(f'uploader:{uploader} scandate:[{currentDayComplete} TO {nextDayComplete}]'):
+for i in search_items(f'uploader:{uploader} scandate:[{yesterdayComplete} TO {currentDayComplete}]'):
     allItems.add(i['identifier'])
 itemCountTotal = len(allItems)
 print("Total item count: " + str(itemCountTotal))
@@ -42,7 +43,7 @@ print("Total item count: " + str(itemCountTotal))
 if itemCountTotal > 0:
     for i in range(1, 11):
         items = set()
-        for j in search_items(f'uploader:{uploader} cardcount:{i} scandate:[{currentDayComplete} TO {nextDayComplete}]'):
+        for j in search_items(f'uploader:{uploader} cardcount:{i} scandate:[{yesterdayComplete} TO {currentDayComplete}]'):
             items.add(j['identifier'])
             allItems.discard(j['identifier'])
         cardCountTotal += (len(items) * i)
@@ -63,8 +64,14 @@ else:
     print("No items found")
 
 
+with open(f"/home/gark/MicroficheScanning/scanners/yesterday.html") as fp:
+    soup = BeautifulSoup(fp, 'html.parser')
+    soup.find(id=f"{uploaderArg}Yesterday1").string = str(cardCountTotal)
+with open(f"/home/gark/MicroficheScanning/scanners/yesterday.html", "w") as fp:
+    fp.write(soup.prettify())
+
 with open(f"/home/gark/MicroficheScanning/scanners/{uploaderArg}.html") as fp:
     soup = BeautifulSoup(fp, 'html.parser')
-    soup.find(id=f"{uploaderArg}Today").string = str(cardCountTotal)
+    soup.find(id=f"{uploaderArg}Yesterday").string = str(cardCountTotal)
 with open(f"/home/gark/MicroficheScanning/scanners/{uploaderArg}.html", "w") as fp:
     fp.write(soup.prettify())
