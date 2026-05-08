@@ -1,17 +1,10 @@
-Set up bash/cron automation
-	Mostly functional with any luck today + needs updating with some better timing
 Set up openvpn on the pi for remote debugging
+
 Set up manual github workflow to run script
-	might need custom python script or be a super long workflow with all scanners
+        might need custom python script or be a super long workflow with all scanners
+
 Implement proper try catches throughout scripts
-	failure occuring due to archive being slow/down can probably result in some weird errors
-
-Add support for last week of historical data?
-	if so, keep to the last days with actual scans?
-
-Deploy the page to cloudflare hosting
-	rough math puts build count at between 340 and 391, both which leave plenty of overhead on free plan of 500
-Make Github repo public
+        failure occuring due to archive being slow/down can probably result in some weird errors
 
 Clean up styling/css
-	also bring in the media queries for a new table
+        also bring in the media queries for a new table
