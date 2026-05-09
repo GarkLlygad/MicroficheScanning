@@ -42,4 +42,4 @@
 40 6 * * 2-6 /usr/bin/python3 /home/gark/MicroficheScanning/yesterday.py xane
 42 6 * * 2-6 /usr/bin/python3 /home/gark/MicroficheScanning/yesterday.py kurt
 44 6 * * 2-6 /usr/bin/python3 /home/gark/MicroficheScanning/yesterday.py louis
-2 8 * * 6 /home/gark/MicroficheScanning/autoRun.sh >> /home/gark/cron.log 2>&1
+2 7 * * 6 /home/gark/MicroficheScanning/autoRun.sh >> /home/gark/cron.log 2>&1
