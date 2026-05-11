@@ -19,7 +19,7 @@
 46 15-23 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py xane
 48 7-15 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py kurt
 50 7-15 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/cardHour.py louis
-55 6 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/rescan.py
+55 6,11,20 * * 1-5 /usr/bin/python3 /home/gark/MicroficheScanning/rescan.py
 2 8-23 * * 1-5 /home/gark/MicroficheScanning/autoRun.sh >> /home/gark/cron.log 2>&1
 4 6 * * 2-6 /usr/bin/python3 /home/gark/MicroficheScanning/yesterday.py dylan
 6 6 * * 2-6 /usr/bin/python3 /home/gark/MicroficheScanning/yesterday.py elijah
