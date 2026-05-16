@@ -7,4 +7,4 @@ Implement proper try catches throughout scripts
         failure occuring due to archive being slow/down can probably result in some weird errors
 
 Clean up styling/css
-        also bring in the media queries for a new table
+	Clarify how to customize styling?
