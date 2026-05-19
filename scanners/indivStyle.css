@@ -43,3 +43,27 @@ li {
 ul {
    padding: 0;
 }
+
+#name {
+   border-style: solid;
+   border-top-style: none;
+   border-right-style: none;
+   border-left-style: none;
+   border-bottom-width: thin;
+   padding-bottom: 0.15em;
+}
+
+#today, #yesterday {
+   border-style: solid;
+   border-top-style: none;
+   border-right-style: none;
+   border-left-style: none;
+   border-bottom-width: thin;
+   padding-bottom: 0.3em;
+}
+
+@media screen and (max-width: 768px) {
+   ul {
+       font-size: smaller;
+   }
+}
