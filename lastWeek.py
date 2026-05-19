@@ -67,7 +67,7 @@ else:
 
 with open(f"/home/gark/MicroficheScanning/scanners/{uploaderArg}.html") as fp:
     soup = BeautifulSoup(fp, 'html.parser')
-    soup.find(id=f"{uploaderArg}LastWeekDate{str(deltaDay)}").string = dayBefore.strftime("%Y/%m/%d")
+    soup.find(id=f"{uploaderArg}LastWeekDate{str(deltaDay)}").string = dayBefore.strftime("%m/%d")
     soup.find(id=f"{uploaderArg}LastWeekCard{str(deltaDay)}").string = str(cardCountTotal)
 with open(f"/home/gark/MicroficheScanning/scanners/{uploaderArg}.html", "w") as fp:
     fp.write(soup.prettify())
