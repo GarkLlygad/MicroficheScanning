@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-uploaders = ['dylan', 'elijah', 'fernando', 'axia', 'cameron', 'danielle', 'emmie', 'fredy', 'hope', 'jay', 'josh', 'kurt', 'maeve', 'maya', 'michael', 'miguel', 'sophia', 'annie', 'vinny', 'xane']
+uploaders = ['dylan', 'elijah', 'fernando', 'axia', 'cameron', 'danielle', 'emmie', 'fredy', 'hope', 'jay', 'josh', 'kurt', 'maeve', 'maya', 'michael', 'wesley', 'sophia', 'annie', 'vinny', 'xane']
 
 for i in uploaders:
     with open(f"/home/gark/MicroficheScanning/scanners/{i}.html") as fp:

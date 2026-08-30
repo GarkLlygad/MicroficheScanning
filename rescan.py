@@ -2,8 +2,8 @@ from internetarchive import get_item, search_items
 from bs4 import BeautifulSoup
 
 cardCountTotal = 0
-uploaderList = ['associate-axia-barish', 'associate-cameron-patera', 'associate-danielle-leard', 'associate-dylan-lewis', 'elijah_jarret', 'associate-emmie-zimmer', 'fernando_sibrian', 'associate-fredy-udave', 'associate-hope-snipes', 'associate-jay-luca', 'associate-josh-salazar', 'associate-kurt-hamilton', 'louis.brizuela@archive.org', 'associate-maeve-iwasaki', 'associate-maya-pearsall', 'associate-michael-arp', 'associate-miguel-salazar', 'associate-sophia-huang', 'associate-annie-russell', 'associate-vinny-taylor', 'associate-xaneath-nelson']
-uploaderArgList = ['axia', 'cameron', 'danielle', 'dylan', 'elijah', 'emmie', 'fernando', 'fredy', 'hope', 'jay', 'josh', 'kurt', 'louis', 'maeve', 'maya', 'michael', 'miguel', 'sophia', 'sylvie', 'vinny', 'xane']
+uploaderList = ['associate-axia-barish', 'associate-cameron-patera', 'associate-danielle-leard', 'associate-dylan-lewis', 'elijah_jarret', 'associate-emmie-zimmer', 'fernando_sibrian', 'associate-fredy-udave', 'associate-hope-snipes', 'associate-jay-luca', 'associate-josh-salazar', 'associate-kurt-hamilton', 'louis.brizuela@archive.org', 'associate-maeve-iwasaki', 'associate-maya-pearsall', 'associate-michael-arp', 'associate-wesley-russell', 'associate-sophia-huang', 'associate-annie-russell', 'associate-vinny-taylor', 'associate-xaneath-nelson']
+uploaderArgList = ['axia', 'cameron', 'danielle', 'dylan', 'elijah', 'emmie', 'fernando', 'fredy', 'hope', 'jay', 'josh', 'kurt', 'louis', 'maeve', 'maya', 'michael', 'wesley', 'sophia', 'sylvie', 'vinny', 'xane']
 for indexUploader, a in enumerate(uploaderList):
     allItems = []
     for iSearch in search_items(f'uploader:{a} micro_review:rescan'):
