@@ -8,6 +8,8 @@ uploaderArg = sys.argv[1]
 uploaderList = ['associate-dylan-lewis', 'elijah_jarret', 'fernando_sibrian', 'associate-axia-barish', 'associate-cameron-patera', 'associate-danielle-leard', 'associate-emmie-zimmer', 'associate-fredy-udave', 'associate-hope-snipes', 'associate-jay-luca', 'associate-josh-salazar', 'associate-kurt-hamilton', 'associate-maeve-iwasaki', 'associate-maya-pearsall', 'associate-michael-arp', 'associate-wesley-russell', 'associate-sophia-huang', 'associate-annie-russell', 'associate-vinny-taylor', 'associate-xaneath-nelson', 'louis.brizuela@archive.org']
 if uploaderArg == "sylvie":
     uploader = 'associate-annie-russell'
+elif uploaderArg =="wesley":
+    uploader = 'wjrussell829@gmail.com'
 else:
     for i in uploaderList:
         if uploaderArg in i:
